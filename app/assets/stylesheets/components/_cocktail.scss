@@ -1,0 +1,44 @@
+.container {
+
+  text-align: center;
+
+  h1{
+    color: #E8C8B3;
+  }
+  h2{
+    color: #E8C8B3;
+  }
+  h3{
+    color: #E8C8B3;
+  }
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.ingredient {
+  p{
+    margin: 0px;
+    padding-right: 5px;
+  }
+
+  a{
+    color:#4A4748;
+    font-size: 7px;
+  }
+  a:hover {
+    text-decoration: none;
+    color:#B9B3B3;
+  }
+}
+
+.dose {
+}
+
+.form-control-label {
+  color: #4A4748;
+}

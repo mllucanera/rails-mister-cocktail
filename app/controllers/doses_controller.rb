@@ -26,7 +26,6 @@ before_action :set_cocktail, only: [:new, :create]
 
 def set_cocktail
     @cocktail = Cocktail.find(params[:cocktail_id])
-
 end
 
 
