@@ -1,10 +1,29 @@
-<h1>Cocktails:</h1>
-<ul>
-<% @cocktails.each do |c| %>
-  <li>
-    <%= c.name %>
-  </li>
-<% end %>
-</ul>
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://images.unsplash.com/photo-1509807995916-c332365e2d9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=4c8d364e633e2015fbac047f327ce098&auto=format&fit=crop&w=1271&q=80');">
+  <div class="banner-content">
+    <h1>Fancy Cocktails</h1>
+    <p>Have some drinks with us!</p>
+  </div>
+</div>
 
+
+<div class="container">
+  <div class="row">
+
+    <% @cocktails.each do |c| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1448832529029-aca2dfcaf7c9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e50ae07c35d8cd0bf0d912cf8dccb61b&auto=format&fit=crop&w=334&q=80');">
+        <div class="card-description">
+          <%= link_to c.name, cocktail_path(c)%>
+        </div>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="new_cocktail_button">
+<button type="button" class="btn btn-info " >
 <%= link_to "New Cocktail", new_cocktail_path %>
+</button>
+</div>
